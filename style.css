@@ -1,0 +1,35 @@
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ text-decoration: none;
+}
+body{
+ background-color: aliceblue;
+}
+#image{
+ width: 300px;
+ height: 300px;
+ border-radius: 50%;
+ margin-bottom: 20px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+#profile{
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ position: absolute;
+ background-color: white;
+ padding: 60px 50px;
+ border-radius: 10px;
+ text-align: left;
+}
+#profile p{
+ padding-bottom: 13px;
+ font-size: 1.2rem;
+}
+a{
+ color: black;
+}
