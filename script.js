@@ -4,10 +4,14 @@ let currentDayElement = document.getElementById('currentDayOfTheWeek');
 currentDayElement.innerHTML = `
 <b>Current Day of the Week:</b> ${daysOfTheWeek[currentDay]}
 `;
-const currentTimeMillis = Date.now();
-const currentUtcTime = new Date(currentTimeMillis);
-const formattedTime = currentUtcTime.toISOString();
+
 let currentUTCTimeElement = document.getElementById('currentUTCTime');
-currentUTCTimeElement.innerHTML = `
-<b>Current UTC Time:</b> ${formattedTime}
+function updateDateTime(){
+ let currentUtcTime = new Date();
+ let utcTimeString = currentUtcTime.toISOString();
+ currentUTCTimeElement.innerHTML = `
+<b>Current UTC Time:</b> ${utcTimeString}
 `;
+}
+setInterval(updateDateTime, 1000);
+updateDateTime();
